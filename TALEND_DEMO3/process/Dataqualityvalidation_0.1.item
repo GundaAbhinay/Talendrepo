@@ -201,7 +201,7 @@
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="validRecords" expressionFilter="row1.phone.matches(&quot;\\d{10}&quot;) &#xD;&#xA;&amp;&amp; row1.email.contains(&quot;@&quot;) &#xD;&#xA;&amp;&amp; row1.email.endsWith(&quot;.com&quot;) &#xD;&#xA;&amp;&amp; row1.full_name.split(&quot; &quot;).length >= 2&#xD;&#xA;" activateExpressionFilter="true">
         <mapperTableEntries name="customer_id" expression="row1.customer_id " type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="full_name" expression="StringHandling.UPCASE(StringHandling.LEFT(StringHandling.TRIM(row1.full_name), 1)) + row1.full_name.substring(1).toLowerCase()" type="id_String" nullable="true"/>
+        <mapperTableEntries name="full_name" expression="StringHandling.UPCASE(StringHandling.LEFT(StringHandling.TRIM(row1.full_name), 1)) + row1.full_name.substring(1).toLowerCase() " type="id_String" nullable="true"/>
         <mapperTableEntries name="email" expression="row1.email " type="id_String" nullable="true"/>
         <mapperTableEntries name="phone" expression="row1.phone " type="id_String" nullable="true"/>
       </outputTables>
